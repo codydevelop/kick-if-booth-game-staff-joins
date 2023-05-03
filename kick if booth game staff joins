@@ -1,8 +1,4 @@
 print("Made by lightoid#1583")
-while true do
-   
-    
-print("Script Loaded!")
 -- List of Staff IDs to check for--
 local playerIDs = {
     2347113781,
@@ -45,8 +41,4 @@ for _, id in ipairs(playerIDs) do
         game:GetService'Players'.LocalPlayer:Kick("A Staff Member Joined! This Script Saved You From Possible Ban.")
         break
     end
-end
-
-    
-    task.wait(1)
 end
