@@ -1,4 +1,3 @@
-print("Made by lightoid#1583")
 -- List of Staff IDs to check for--
 local playerIDs = {
     2347113781,
@@ -34,11 +33,14 @@ local function playerIsInServer(playerID)
     return false
 end
 
--- Check if any of the specified player IDs are in the server
-for _, id in ipairs(playerIDs) do
-    if playerIsInServer(id) then
-        print("Staff in game")
-        game:GetService'Players'.LocalPlayer:Kick("A Staff Member Joined! This Script Saved You From Possible Ban.")
-        break
+while true do
+    -- Check if any of the specified player IDs are in the server
+    for _, id in ipairs(playerIDs) do
+        if playerIsInServer(id) then
+            print("Staff in game")
+            game:GetService('Players').LocalPlayer:Kick("A Staff Member Joined! This Script Saved You From Possible Ban.")
+            break
+        end
     end
+    wait(1)
 end
